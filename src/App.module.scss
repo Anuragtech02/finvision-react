@@ -1,0 +1,15 @@
+@import "./utils/commons.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-primary: #3d1f8b;
+  --clr-dark: #0e0823;
+}
+
+.container {
+  @extend .flexRow;
+}
