@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./App.module.scss";
+import Button from "./components/Button/Button";
 
 const App = () => {
-  return <div className={styles.container}>This is the main page.</div>;
+  return (
+    <div className={styles.container}>
+      <Button variant="solid">Upload</Button>
+    </div>
+  );
 };
 
 export default App;

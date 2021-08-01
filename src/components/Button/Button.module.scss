@@ -1,0 +1,47 @@
+@import "../../utils/commons.scss";
+
+$border: 2px;
+
+.styledBtn {
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  min-width: 3rem;
+}
+.default {
+  background: linear-gradient(
+    to right,
+    var(--clr-dark),
+    var(--clr-primary),
+    var(--clr-primary),
+    var(--clr-dark)
+  );
+  color: white;
+  transition: 0.2s ease-in-out;
+  transition-property: box-shadow;
+  &:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+.btnOutline {
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: 4rem;
+  position: relative;
+  color: var(--clr-primary);
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: linear-gradient(to right, var(--clr-primary), var(--clr-dark));
+  }
+}
