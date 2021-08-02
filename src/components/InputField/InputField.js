@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./InputField.module.scss";
 
-const InputField = ({ fieldName, type, props, placeholder }) => {
+const InputField = ({ label: fieldName, type, props, placeholder }) => {
   return (
-    <React.Fragment>
+    <div className={styles.container}>
       <label className={styles.inputLabel} htmlFor={fieldName}>
         {fieldName}
       </label>
@@ -14,7 +14,7 @@ const InputField = ({ fieldName, type, props, placeholder }) => {
         type={type}
         {...props}
       ></input>
-    </React.Fragment>
+    </div>
   );
 };
 
