@@ -34,6 +34,7 @@ $noise: "./assets/gradients/noise.svg";
       height: 100%;
       // object-fit: cover;
     }
+    display: none;
   }
   .gradientLeft {
     width: 300px;
@@ -54,7 +55,8 @@ $noise: "./assets/gradients/noise.svg";
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden !important;
   position: relative;
   h1 {
     font-size: 2.5rem;

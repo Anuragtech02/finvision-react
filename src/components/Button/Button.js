@@ -13,11 +13,12 @@ const getClassBasedOnProps = (variant) => {
   }
 };
 
-const Button = ({ children, type, variant, props }) => {
+const Button = ({ children, type, variant, onClick, props }) => {
   return (
     <button
       className={clsx(styles.styledBtn, getClassBasedOnProps(variant))}
       type={type}
+      onClick={onClick}
       {...props}
     >
       {children}

@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./App.module.scss";
-import Button from "./components/Button/Button";
 import rightGradient from "./assets/gradients/right-gradient.svg";
 import leftGradient from "./assets/gradients/left-gradient.svg";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
     <div className={styles.container}>
-      <Button variant="solid">Upload</Button>
+      <Navbar />
       <div className={styles.gradientRight}>
         <img src={rightGradient} alt="finvision-gradient" />
       </div>
