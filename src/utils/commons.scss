@@ -1,3 +1,9 @@
+// breakpoints
+$media-xl: 1500px;
+$media-lg: 1200px;
+$media-md: 976px;
+$media-sm: 600px;
+
 .flexRow {
   display: flex;
   justify-content: center;
@@ -6,4 +12,10 @@
 .flexCol {
   @extend .flexRow;
   flex-direction: column;
+}
+.noDecoration {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
 }
