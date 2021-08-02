@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./InputField.module.scss";
 
-const InputField = () => {
-  return <input className={styles.container}></input>;
+const InputField = ({ children, type, required }) => {
+  return <input className={styles.container} type={type}></input>;
 };
 
 export default InputField;
