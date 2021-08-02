@@ -1,5 +1,8 @@
 @import "./utils/commons.scss";
 
+// Constants
+$noise: "./assets/gradients/noise.svg";
+
 * {
   margin: 0;
   padding: 0;
@@ -17,19 +20,42 @@
   min-height: 100vh;
 
   .gradientRight {
-    width: 40vh;
-    height: 40vh;
-    background: transparent;
-    box-shadow: 0 0 40rem var(--clr-primary);
+    width: 50%;
+    height: 50vh;
     position: absolute;
     top: 0;
-    right: 0;
-    transform: translate(0, 0);
+    right: -20%;
+    transform: translate(-20%, 0);
+    transform-origin: center;
+    pointer-events: none;
+    opacity: 0.8;
+    img {
+      width: 100%;
+      height: 100%;
+      // object-fit: cover;
+    }
+  }
+  .gradientLeft {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 10%;
+    left: -5%;
+    // transform: translate(0, 0);
+    transform-origin: center;
+    pointer-events: none;
+    opacity: 0.7;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
+  position: relative;
   h1 {
     font-size: 2.5rem;
   }
@@ -47,5 +73,18 @@ body {
   }
   h6 {
     font-size: 1.2rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url($noise);
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
   }
 }
