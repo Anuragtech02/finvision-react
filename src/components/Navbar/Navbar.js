@@ -12,6 +12,11 @@ const Navbar = () => {
         <li className={styles.navLink}>Learn</li>
         <li className={styles.navLink}>Contact</li>
       </ul>
+      <div className={styles.burgerContainer}>
+        <div className={styles.burger}></div>
+        <div className={styles.burger}></div>
+        <div className={styles.burger}></div>
+      </div>
     </nav>
   );
 };
