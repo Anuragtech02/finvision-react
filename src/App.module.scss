@@ -13,6 +13,19 @@
 .container {
   @extend .flexRow;
   padding: 2rem;
+  background: var(--clr-dark);
+  min-height: 100vh;
+
+  .gradientRight {
+    width: 40vh;
+    height: 40vh;
+    background: transparent;
+    box-shadow: 0 0 40rem var(--clr-primary);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
 }
 body {
   font-family: "Inter", sans-serif;

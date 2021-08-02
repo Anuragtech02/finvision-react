@@ -6,6 +6,7 @@ const App = () => {
   return (
     <div className={styles.container}>
       <Button variant="solid">Upload</Button>
+      <div className={styles.gradientRight}></div>
     </div>
   );
 };
