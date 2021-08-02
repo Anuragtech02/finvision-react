@@ -1,1 +1,13 @@
 @import "../../utils/commons.scss";
+
+.inputLabel {
+  color: white;
+  padding: 5px;
+}
+.inputField {
+  @extend .noDecoration;
+  color: white;
+  padding: 5px;
+  background-color: inherit;
+  border: white;
+}
