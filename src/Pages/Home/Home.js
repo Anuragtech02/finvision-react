@@ -1,5 +1,5 @@
 import styles from "./Home.module.scss";
-import Coin from "../../../assets/Home/Coin.svg";
+import Coin from "../../assets/Home/Coin.svg";
 const Home = () => {
   return (
     <div className={styles.container}>

@@ -5,7 +5,7 @@ import leftGradient from "./assets/gradients/left-gradient.svg";
 import Navbar from "./components/Navbar/Navbar";
 import InputField from "./components/InputField/InputField";
 import Cursor from "./components/Cursor/Cursor";
-import Home from "./components/Pages/Home/Home";
+import Home from "./Pages/Home/Home";
 
 const App = () => {
   return (
