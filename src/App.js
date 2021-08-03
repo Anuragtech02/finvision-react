@@ -5,18 +5,14 @@ import leftGradient from "./assets/gradients/left-gradient.svg";
 import Navbar from "./components/Navbar/Navbar";
 import InputField from "./components/InputField/InputField";
 import Cursor from "./components/Cursor/Cursor";
+import Home from "./components/Pages/Home/Home";
 
 const App = () => {
   return (
     <React.Fragment>
-      <Cursor />
       <div className={styles.container}>
         <Navbar />
-        <InputField
-          type="password"
-          label="Password"
-          placeholder="khud soach"
-        ></InputField>
+        <Home></Home>
         <div className={styles.gradientRight}>
           <img src={rightGradient} alt="finvision-gradient" />
         </div>

@@ -1,0 +1,26 @@
+.container {
+  pointer-events: none;
+}
+.image {
+  width: 80%;
+  margin-left: 8%;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 800px) {
+  //Written by shishir
+  .image {
+    width: 800px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  //Written by shishir
+  .container {
+    padding: 2rem;
+  }
+}
