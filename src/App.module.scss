@@ -22,7 +22,7 @@ $noise: "./assets/gradients/noise.svg";
   .gradientRight {
     width: 50%;
     height: 50vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -20%;
     transform: translate(-20%, 0);
@@ -38,7 +38,7 @@ $noise: "./assets/gradients/noise.svg";
   .gradientLeft {
     width: 300px;
     height: 300px;
-    position: absolute;
+    position: fixed;
     bottom: 10%;
     left: -5%;
     // transform: translate(0, 0);
