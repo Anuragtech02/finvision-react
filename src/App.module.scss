@@ -55,6 +55,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   width: 100%;
+  color: white;
   overflow-x: hidden !important;
   position: relative;
   h1 {
@@ -87,5 +88,12 @@ body {
     background-size: cover;
     z-index: 10;
     pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  //Written by shishir
+  .container {
+    padding: 0;
   }
 }
