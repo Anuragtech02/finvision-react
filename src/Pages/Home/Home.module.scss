@@ -1,5 +1,27 @@
 .container {
   pointer-events: none;
+  width: 100%;
+  margin: 0px 100px;
+  display: flex;
+  flex-direction: column;
+}
+.container > * {
+  position: relative;
+  width: fit-content;
+}
+.sideHeading {
+  margin-top: 50px;
+  font-weight: lighter;
+}
+.mainHeading {
+  font-size: 5rem;
+}
+.para {
+  width: 250px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 150px;
+  margin-left: auto;
 }
 .image {
   width: 80%;
@@ -7,13 +29,23 @@
   position: absolute;
   left: 0px;
   top: 100px;
-  z-index: 0;
 }
+@media screen and (max-width: 1100px) {
+  .container {
+    margin: 0px;
+  }
 
+  .para {
+    margin-left: 75%;
+  }
+}
 @media screen and (max-width: 800px) {
   //Written by shishir
   .image {
     width: 800px;
+    margin-left: 0;
+  }
+  .para {
     margin-left: 0;
   }
 }
@@ -21,6 +53,17 @@
 @media screen and (max-width: 670px) {
   //Written by shishir
   .container {
-    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+  }
+  .mainHeading {
+    font-size: 3rem;
+  }
+  .para {
+    width: 100%;
+    margin-top: 75px;
   }
 }
