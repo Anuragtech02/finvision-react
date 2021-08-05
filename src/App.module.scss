@@ -11,12 +11,15 @@ $noise: "./assets/gradients/noise.svg";
 :root {
   --clr-primary: #3d1f8b;
   --clr-dark: #0e0823;
+
+  --fixedWidth: 85%;
 }
 
 .container {
   @extend .flexRow;
   padding: 2rem;
   background: var(--clr-dark);
+  width: 100vw;
   min-height: 100vh;
 
   .gradientRight {
@@ -77,6 +80,9 @@ body {
   }
   h6 {
     font-size: 1.2rem;
+  }
+  p {
+    font-size: 1.3rem;
   }
 
   // &::before {

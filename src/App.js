@@ -19,16 +19,16 @@ const App = () => {
             <Route path="/learn" component={Learn} />
           </Switch>
         </Router>
-        <div className={styles.gradientRight}>
+        {/* <div className={styles.gradientRight}>
           <img src={rightGradient} alt="finvision-gradient" />
         </div>
         <div className={styles.gradientLeft}>
           <img src={leftGradient} alt="finvision-gradient" />
-        </div>
+        </div> */}
       </div>
-      <div className={styles.gradientLeft}>
+      {/* <div className={styles.gradientLeft}>
         <img src={leftGradient} alt="finvision-gradient" />
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };
