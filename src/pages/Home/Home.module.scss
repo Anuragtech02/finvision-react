@@ -105,14 +105,18 @@
     }
   }
 
-  .heroPara {
+  .heroParaContainer {
     @extend .flexCol;
     height: 60%;
-    width: fit-content;
     justify-content: flex-end;
-    align-items: flex-start;
-    p {
-      width: 40%;
+    align-items: flex-end;
+    margin-top: 10rem;
+    .heroPara {
+      width: fit-content;
+      p {
+        width: 80%;
+        margin-left: auto;
+      }
     }
   }
 }
