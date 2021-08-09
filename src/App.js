@@ -5,14 +5,15 @@ import leftGradient from "./assets/gradients/left-gradient.svg";
 import Navbar from "./components/Navbar/Navbar";
 import InputField from "./components/InputField/InputField";
 import Cursor from "./components/Cursor/Cursor";
-import Home from "./Pages/Home/Home";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 
 const App = () => {
   return (
     <React.Fragment>
       <div className={styles.container}>
         <Navbar />
-        <Home></Home>
+        <About></About>
         <div className={styles.gradientRight}>
           <img src={rightGradient} alt="finvision-gradient" />
         </div>
