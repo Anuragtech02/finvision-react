@@ -17,7 +17,6 @@ $noise: "./assets/gradients/noise.svg";
 
 .container {
   @extend .flexRow;
-  padding: 2rem;
   background: var(--clr-dark);
   width: 100vw;
   min-height: 100vh;

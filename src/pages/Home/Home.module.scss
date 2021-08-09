@@ -74,13 +74,15 @@
 
 .container {
   @extend .flexRow;
+  position: relative;
   height: 100vh;
+  overflow-x: hidden;
   justify-content: space-between;
   width: var(--fixedWidth);
 
-  background: url(../../assets/Home/coin.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  // background: url(../../assets/Home/coin.png);
+  // background-size: contain;
+  // background-repeat: no-repeat;
 
   .heroHeading,
   .heroPara {
@@ -92,6 +94,7 @@
     // justify-content: flex-end;
     // height: 100%;
     margin-top: -3rem;
+    z-index: 1;
 
     h3 {
       font-family: "Playfair Display", serif;
@@ -103,6 +106,15 @@
       font-size: 7.2rem;
       font-weight: 800;
     }
+
+    @media screen and (max-width: $media-lg) {
+      h1 {
+        font-size: 5rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
   }
 
   .heroParaContainer {
@@ -111,12 +123,32 @@
     justify-content: flex-end;
     align-items: flex-end;
     margin-top: 10rem;
+    z-index: 1;
     .heroPara {
-      width: fit-content;
-      p {
-        width: 80%;
-        margin-left: auto;
-      }
+      // width: fit-content;
+      width: 80%;
     }
+  }
+
+  .coinImage {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    width: 700px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    @media screen and (max-width: $media-lg) {
+      width: 600px;
+    }
+  }
+
+  .scrollToDiscover {
+    cursor: pointer;
   }
 }

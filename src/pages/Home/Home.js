@@ -1,11 +1,15 @@
 import styles from "./Home.module.scss";
 import coinImage from "../../assets/Home/coin.png";
 import { Grid } from "@material-ui/core";
+import { ArrowDown } from "react-feather";
 
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Grid container spacing={2}>
+      <div className={styles.coinImage}>
+        <img src={coinImage} alt="finvisio-hero-coin" />
+      </div>
+      <Grid container spacing={2} style={{ zIndex: 1 }}>
         <Grid item sm={8} xs={12} md={8} lg={8} xl={8}>
           <div className={styles.heroHeading}>
             <h3>Let's Visualize</h3>
@@ -20,7 +24,9 @@ const Home = () => {
                 generate income in the long run.
               </p>
               <br />
-              <span>SCROLL TO DISCOVER</span>
+              <span className={styles.scrollToDiscover}>
+                <ArrowDown size="1rem" /> SCROLL TO DISCOVER
+              </span>
             </div>
           </div>
         </Grid>
