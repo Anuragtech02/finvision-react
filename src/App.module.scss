@@ -11,12 +11,14 @@ $noise: "./assets/gradients/noise.svg";
 :root {
   --clr-primary: #3d1f8b;
   --clr-dark: #0e0823;
+
+  --fixedWidth: 85%;
 }
 
 .container {
   @extend .flexRow;
-  padding: 2rem;
   background: var(--clr-dark);
+  width: 100vw;
   min-height: 100vh;
 
   .gradientRight {
@@ -34,6 +36,7 @@ $noise: "./assets/gradients/noise.svg";
       height: 100%;
       // object-fit: cover;
     }
+    display: none;
   }
   .gradientLeft {
     width: 300px;
@@ -49,6 +52,7 @@ $noise: "./assets/gradients/noise.svg";
       width: 100%;
       height: 100%;
     }
+    display: none;
   }
 }
 body {
@@ -76,19 +80,22 @@ body {
   h6 {
     font-size: 1.2rem;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url($noise);
-    background-size: cover;
-    z-index: 10;
-    pointer-events: none;
+  p {
+    font-size: 1.3rem;
   }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   background-image: url($noise);
+  //   background-size: cover;
+  //   z-index: 10;
+  //   pointer-events: none;
+  // }
 }
 
 @media screen and (max-width: 670px) {
