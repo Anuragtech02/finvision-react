@@ -4,6 +4,8 @@ import styles from "./App.module.scss";
 import rightGradient from "./assets/gradients/right-gradient.svg";
 import leftGradient from "./assets/gradients/left-gradient.svg";
 import Navbar from "./components/Navbar/Navbar";
+import InputField from "./components/InputField/InputField";
+import Cursor from "./components/Cursor/Cursor";
 // import InputField from "./components/InputField/InputField";
 // import Cursor from "./components/Cursor/Cursor";
 import { Home, Learn } from "./pages";
@@ -13,6 +15,8 @@ const App = () => {
     <React.Fragment>
       <div className={styles.container}>
         <Navbar />
+        <About></About>
+        <div className={styles.gradientRight}>
         <Router basename="/finvision-react">
           <Switch>
             <Route path="/" exact component={Home} />
