@@ -17,22 +17,7 @@ const App = () => {
     <>
       <div className={styles.container}>
         <Navbar />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            width: "100%",
-          }}
-        >
-          <Card title="Share Market" returnRate="Avg. 17%" risk="High"></Card>
-          <Card
-            title="Hold in your Savings Accounts"
-            returnRate="Avg. 17%"
-            risk="Nil"
-          ></Card>
-          <Card title="Share Market" returnRate="Avg. 17%" risk="High"></Card>
-          <Card title="Share Market" returnRate="Avg. 17%" risk="High"></Card>
-        </div>
+
         <div className={styles.gradientRight}>
           {/* <div className={styles.gradientRight}>
           <img src={rightGradient} alt="finvision-gradient" />
@@ -41,13 +26,13 @@ const App = () => {
           <img src={leftGradient} alt="finvision-gradient" />
         </div> */}
         </div>
-        {/*<Router basename="/finvision-react">
+        <Router basename="/finvision-react">
           <Switch>
             <Route path="/" exact component={Home} />
             <Route exact path="/learn" component={Learn} />
             <Route exact path="/about" component={About} />
           </Switch>
-      </Router>*/}
+        </Router>
         {/* <div className={styles.gradientLeft}>
         <img src={leftGradient} alt="finvision-gradient" />
       </div> */}
