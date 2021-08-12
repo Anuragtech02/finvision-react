@@ -13,7 +13,6 @@ const data = [
 ];
 
 const Learn = ({ history }) => {
-  const [current, setCurrent] = useState(0);
   const [active, setActive] = useState(false);
 
   const { id } = useParams();
@@ -28,7 +27,6 @@ const Learn = ({ history }) => {
 
   useEffect(() => {
     container.current.style.opacity = 1;
-    console.log({ cont: container.current });
     setActive(false);
     setTimeout(() => {
       setActive(true);
@@ -42,7 +40,7 @@ const Learn = ({ history }) => {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "anticipate" }}
+            transition={{ duration: 1, ease: "easeOut" }}
             className={styles.mainText}
           >
             <h1>{data[id]}</h1>
@@ -52,7 +50,7 @@ const Learn = ({ history }) => {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "anticipate" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             <Button variant="outlined" onClick={onClickNext}>
               <span className={styles.flexRow}>

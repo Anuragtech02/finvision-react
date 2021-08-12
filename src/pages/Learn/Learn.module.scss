@@ -4,7 +4,7 @@
   @extend .flexCol;
   width: var(--fixedWidth);
   margin: 0 auto;
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
   transition-property: opacity;
   .mainText {
     width: 80%;
