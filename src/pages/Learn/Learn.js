@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Learn.module.scss";
 import { Button } from "../../components";
 import { ArrowRight } from "react-feather";
+import { motion } from "framer-motion";
+import { withRouter, useParams } from "react-router";
 
 const data = [
   "Hey, this is Finvison",
@@ -10,27 +12,58 @@ const data = [
   "Let's look at it through the lens of a game in which we give you a certain amount of money and allow you to invest without the fear of losing it.",
 ];
 
-const Learn = () => {
+const Learn = ({ history }) => {
   const [current, setCurrent] = useState(0);
+  const [active, setActive] = useState(false);
+
+  const { id } = useParams();
+  const container = useRef(null);
 
   const onClickNext = () => {
-    setCurrent((curr) => (curr + 1) % 4);
+    container.current.style.opacity = 0;
+    setTimeout(() => {
+      history.push(`/learn/${(parseInt(id) + 1) % 4}`);
+    }, 100);
   };
 
+  useEffect(() => {
+    container.current.style.opacity = 1;
+    console.log({ cont: container.current });
+    setActive(false);
+    setTimeout(() => {
+      setActive(true);
+    }, 2);
+  }, [id]);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.mainText}>
-        <h1>{data[current]}</h1>
-      </div>
-      <br />
-      <br />
-      <Button variant="outlined" onClick={onClickNext}>
-        <span className={styles.flexRow}>
-          Next &nbsp; <ArrowRight />
-        </span>
-      </Button>
+    <div className={styles.container} ref={container}>
+      {active && (
+        <>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "anticipate" }}
+            className={styles.mainText}
+          >
+            <h1>{data[id]}</h1>
+          </motion.div>
+          <br />
+          <br />
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "anticipate" }}
+          >
+            <Button variant="outlined" onClick={onClickNext}>
+              <span className={styles.flexRow}>
+                Next &nbsp; <ArrowRight />
+              </span>
+            </Button>
+          </motion.div>
+        </>
+      )}
     </div>
   );
 };
 
-export default Learn;
+export default withRouter(Learn);
