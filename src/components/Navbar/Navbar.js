@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,9 +9,15 @@ const Navbar = () => {
         <h4>finvision</h4>
       </div>
       <ul className={styles.navLinks}>
-        <li className={styles.navLink}>About</li>
-        <li className={styles.navLink}>Learn</li>
-        <li className={styles.navLink}>Contact</li>
+        <li className={styles.navLink}>
+          <Link to="/about">About</Link>
+        </li>
+        <li className={styles.navLink}>
+          <Link to="/learn">Learn</Link>
+        </li>
+        <li className={styles.navLink}>
+          <Link to="/contact">Contact</Link>
+        </li>
       </ul>
       <div className={styles.burgerContainer}>
         <div className={styles.burger}></div>

@@ -16,17 +16,16 @@ const App = () => {
   return (
     <>
       <div className={styles.container}>
-        <Navbar />
-
         <div className={styles.gradientRight}>
           {/* <div className={styles.gradientRight}>
           <img src={rightGradient} alt="finvision-gradient" />
-        </div>
-        <div className={styles.gradientLeft}>
+          </div>
+          <div className={styles.gradientLeft}>
           <img src={leftGradient} alt="finvision-gradient" />
         </div> */}
         </div>
         <Router basename="/finvision-react">
+          <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route exact path="/learn" component={Learn} />

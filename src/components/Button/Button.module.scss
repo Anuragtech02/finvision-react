@@ -27,21 +27,9 @@ $border: 2px;
   }
 }
 .btnOutline {
-  background-clip: padding-box;
-  border: solid $border transparent;
-  border-radius: 4rem;
+  border: solid $border white;
+  border-radius: 5px;
   position: relative;
-  color: var(--clr-primary);
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -$border;
-    border-radius: inherit;
-    background: linear-gradient(to right, var(--clr-primary), var(--clr-dark));
-  }
+  background: var(--clr-primary);
+  color: white;
 }

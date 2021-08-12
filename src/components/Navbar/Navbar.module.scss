@@ -40,6 +40,12 @@
     .navLink {
       color: white;
       font-weight: 500;
+      @extend .noDecoration;
+
+      a {
+        color: white;
+        @extend .noDecoration;
+      }
     }
   }
 

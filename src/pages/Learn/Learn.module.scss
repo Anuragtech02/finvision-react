@@ -1,7 +1,15 @@
 @import "../../utils/commons.scss";
 
 .container {
+  @extend .flexCol;
+  width: var(--fixedWidth);
+  margin: 0 auto;
+  .mainText {
+    width: 80%;
+  }
   h1 {
     font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
   }
 }
