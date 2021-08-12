@@ -1,5 +1,5 @@
 import styles from "./About.module.scss";
-import sphere from "../../assets/About/Vectary texture.svg";
+import sphere from "../../assets/About/about-football.png";
 
 const About = () => {
   return (
