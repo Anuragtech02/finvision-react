@@ -10,7 +10,7 @@ import Cursor from "./components/Cursor/Cursor";
 // import Cursor from "./components/Cursor/Cursor";
 import { Home, Learn } from "./pages";
 import About from "./pages/About/About";
-import Card from "./components/Card/Card";
+import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
@@ -31,6 +31,7 @@ const App = () => {
             <Route exact path="/learn" component={Learn} />
             <Route exact path="/learn/:id" component={Learn} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
           </Switch>
         </Router>
         {/* <div className={styles.gradientLeft}>
