@@ -9,31 +9,50 @@ import Cursor from "./components/Cursor/Cursor";
 // import InputField from "./components/InputField/InputField";
 // import Cursor from "./components/Cursor/Cursor";
 import { Home, Learn } from "./pages";
+import About from "./pages/About/About";
+import Card from "./components/Card/Card";
 
 const App = () => {
   return (
-    <React.Fragment>
+    <>
       <div className={styles.container}>
         <Navbar />
-        <About></About>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            width: "100%",
+          }}
+        >
+          <Card title="Share Market" returnRate="Avg. 17%" risk="High"></Card>
+          <Card
+            title="Hold in your Savings Accounts"
+            returnRate="Avg. 17%"
+            risk="Nil"
+          ></Card>
+          <Card title="Share Market" returnRate="Avg. 17%" risk="High"></Card>
+          <Card title="Share Market" returnRate="Avg. 17%" risk="High"></Card>
+        </div>
         <div className={styles.gradientRight}>
-        <Router basename="/finvision-react">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/learn" component={Learn} />
-          </Switch>
-        </Router>
-        {/* <div className={styles.gradientRight}>
+          {/* <div className={styles.gradientRight}>
           <img src={rightGradient} alt="finvision-gradient" />
         </div>
         <div className={styles.gradientLeft}>
           <img src={leftGradient} alt="finvision-gradient" />
         </div> */}
-      </div>
-      {/* <div className={styles.gradientLeft}>
+        </div>
+        {/*<Router basename="/finvision-react">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route exact path="/learn" component={Learn} />
+            <Route exact path="/about" component={About} />
+          </Switch>
+      </Router>*/}
+        {/* <div className={styles.gradientLeft}>
         <img src={leftGradient} alt="finvision-gradient" />
       </div> */}
-    </React.Fragment>
+      </div>
+    </>
   );
 };
 

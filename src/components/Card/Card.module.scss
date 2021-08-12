@@ -1,0 +1,31 @@
+@import "../../utils/commons.scss";
+.container {
+  @extend .flexCol;
+  justify-content: space-between;
+  background-color: rgba($color: #5e3bbc, $alpha: 0.6);
+  padding: 1.4rem;
+  align-items: flex-start;
+  height: 220px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid rgba($color: white, $alpha: 0.3);
+}
+.container h5 {
+  font-weight: 500;
+}
+.detailsContainer {
+  @extend .flexRow;
+  justify-content: space-between;
+  width: 100%;
+}
+.detailsContainer > * {
+  flex: 1;
+}
+.detailsContainer > div > p {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+.detailsContainer > div > h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}

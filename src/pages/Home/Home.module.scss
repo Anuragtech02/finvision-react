@@ -106,7 +106,9 @@
       font-size: 7.2rem;
       font-weight: 800;
     }
-
+    @media screen and (max-width: $media-xl) {
+      margin-top: -2rem;
+    }
     @media screen and (max-width: $media-lg) {
       h1 {
         font-size: 5rem;
@@ -143,12 +145,18 @@
       object-fit: contain;
     }
 
-    @media screen and (max-width: $media-lg) {
-      width: 600px;
+    @media screen and (max-width: $media-xl) {
+      width: 500px;
+    }
+    @media screen and (max-width: $media-md) {
+      width: 400px;
     }
   }
 
   .scrollToDiscover {
     cursor: pointer;
+  }
+  @media screen and (max-width: $media-sm) {
+    width: 100%;
   }
 }
