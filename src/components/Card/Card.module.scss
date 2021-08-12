@@ -6,7 +6,7 @@
   padding: 1.4rem;
   align-items: flex-start;
   height: 220px;
-  width: 250px;
+  min-width: 250px;
   border-radius: 5px;
   border: 1px solid rgba($color: white, $alpha: 0.3);
 }

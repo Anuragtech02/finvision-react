@@ -4,8 +4,6 @@
   @extend .flexCol;
   width: var(--fixedWidth);
   margin: 0 auto;
-  transition: 0.1s ease-in-out;
-  transition-property: opacity;
   .mainText {
     width: 80%;
     margin: 1rem 0;
@@ -15,4 +13,30 @@
     text-align: center;
     margin: 0 auto;
   }
+  .initialAmount {
+    p {
+      color: var(--clr-primary);
+      text-align: center;
+    }
+    input {
+      padding: 1rem 0.6rem;
+      @extend .noDecoration;
+      background: transparent;
+      border-bottom: 2px solid white;
+      color: white;
+      font-size: 1.8rem;
+      margin: 1rem 0;
+      width: 200px;
+      text-align: center;
+    }
+  }
+  .nextContainer {
+    @extend .flexCol;
+  }
+}
+.introContainer {
+  @extend .flexCol;
+  width: 100%;
+  transition: 0.1s ease-in-out;
+  transition-property: opacity;
 }

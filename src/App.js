@@ -8,13 +8,14 @@ import InputField from "./components/InputField/InputField";
 import Cursor from "./components/Cursor/Cursor";
 // import InputField from "./components/InputField/InputField";
 // import Cursor from "./components/Cursor/Cursor";
-import { Home, Learn } from "./pages";
+import { Home, Learn, Chapter } from "./pages";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import GlobalContextProvider from "./utils/contexts/GlobalContext";
 
 const App = () => {
   return (
-    <>
+    <GlobalContextProvider>
       <div className={styles.container}>
         <div className={styles.gradientRight}>
           {/* <div className={styles.gradientRight}>
@@ -32,13 +33,14 @@ const App = () => {
             <Route exact path="/learn/:id" component={Learn} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/learn/chapter/:id" component={Chapter} />
           </Switch>
         </Router>
         {/* <div className={styles.gradientLeft}>
         <img src={leftGradient} alt="finvision-gradient" />
       </div> */}
       </div>
-    </>
+    </GlobalContextProvider>
   );
 };
 

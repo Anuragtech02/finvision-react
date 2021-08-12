@@ -1,0 +1,35 @@
+@import "../../utils/commons.scss";
+
+.container {
+  width: var(--fixedWidth);
+  margin: 0 auto;
+  //   margin-top: calc(10vh + 10px);
+  .header {
+    @extend .flexRow;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .initialBalance {
+    text-align: right;
+    p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+    h5 {
+      font-weight: 400;
+    }
+  }
+  .mainContainer {
+    margin-top: 2rem;
+    @extend .flexRow;
+    justify-content: space-between;
+    align-items: flex-start;
+    .main {
+      width: 70%;
+    }
+    .progress {
+      width: 30%;
+      background: red;
+    }
+  }
+}
