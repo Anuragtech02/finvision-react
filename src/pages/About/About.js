@@ -7,7 +7,7 @@ const About = () => {
       <div className={styles.textContainer}>
         <p>ABOUT US</p>
         <h1 className={styles.heading}>
-          <span className={styles.spanHeading}> A NEW WORLD </span> <br />
+          <span> A NEW WORLD </span> <br />
           INVESTING
         </h1>
         <p>
