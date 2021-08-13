@@ -8,7 +8,13 @@
   height: 220px;
   min-width: 250px;
   border-radius: 5px;
-  border: 1px solid rgba($color: white, $alpha: 0.3);
+  border: 2px solid rgba($color: white, $alpha: 0.3);
+  transition-duration: 200ms;
+}
+.container:hover {
+  box-shadow: 0px 0px 5px rgba($color: white, $alpha: 1);
+  border: 2px solid rgba($color: white, $alpha: 1); //outline instead of border beacause i dont want the inner content to rearrange
+  cursor: pointer;
 }
 .container h5 {
   font-weight: 500;
