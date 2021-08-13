@@ -10,6 +10,10 @@
   border-radius: 5px;
   border: 1px solid rgba($color: white, $alpha: 0.3);
 }
+.container:hover {
+  outline: 2px solid rgba($color: white, $alpha: 1); //outline instead of border beacause i dont want the inner content to rearrange
+  cursor: pointer;
+}
 .container h5 {
   font-weight: 500;
 }
