@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./Chapter.module.scss";
 import { useParams } from "react-router";
 import { Grid } from "@material-ui/core";
@@ -17,6 +17,10 @@ const Chapter = () => {
   const { id } = useParams();
 
   const { initialAmount, chapters, setChapters } = useContext(GlobalContext);
+
+  useEffect(() => {
+    console.log({ chapters });
+  }, [chapters]);
 
   return (
     <div className={styles.container}>
@@ -43,7 +47,36 @@ const Chapter = () => {
             ))}
           </Grid>
         </div>
-        <div className={styles.progress}></div>
+        <div className={styles.progress}>
+          {chapters?.map((chapter) => (
+            <div key={chapter.title} className={styles.chapter}>
+              <div className={styles.bulletTitle}>
+                <span
+                  className={
+                    chapter?.complete
+                      ? styles.bulletComplete
+                      : styles.bulletStarted
+                  }
+                ></span>
+                <p>{chapter?.title}</p>
+              </div>
+              <div className={styles.subchapters}>
+                {chapter.subChapters.map((sub) => (
+                  <div key={sub.title} className={styles.bulletTitle}>
+                    <span
+                      className={
+                        sub?.complete
+                          ? styles.bulletComplete
+                          : styles.bulletStarted
+                      }
+                    ></span>
+                    <p>{sub?.title}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
