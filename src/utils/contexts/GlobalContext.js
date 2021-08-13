@@ -15,6 +15,31 @@ const GlobalContextProvider = ({ children }) => {
       return { ...chapter, subChapters: modSubChapters, complete: false };
     })
   );
+  const [chartData, setChartData] = useState({
+    labels: [
+      "Year 0",
+      "Year 1",
+      "Year 2",
+      "Year 3",
+      "Year 4",
+      "Year 5",
+      "Year 6",
+      "Year 7",
+      "Year 8",
+      "Year 9",
+      "Year 10",
+    ],
+    datasets: [
+      {
+        label: "Amount",
+        data: [],
+      },
+    ],
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem("chartData-finvison", JSON.stringify(chartData));
+  }, [chartData]);
 
   return (
     <GlobalContext.Provider
@@ -25,6 +50,8 @@ const GlobalContextProvider = ({ children }) => {
         setCurrentAmount,
         chapters,
         setChapters,
+        chartData,
+        setChartData,
       }}
     >
       {children}

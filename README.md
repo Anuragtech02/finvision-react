@@ -1,7 +1,11 @@
+![Finvision-graph](https://ik.imagekit.io/jn4utpxjgdd/readme-finvisino_iE-PB3J75.gif?updatedAt=1628859916668)
+
 
 # FINVISION
 
-We compile tricks and tips, as well as financial advice, and present it to you in an easy-to-understand way and provide users with the idea to outsmart their financial investing   making their financial portfolio strong.
+Financial success, like most success in life, isn't about perfection; it's about direction, and we give the user the direction to do so.
+
+We compile tricks and tips, as well as financial advice, and present it to you in an easy-to-understand way and provide users with the idea to outsmart their financial investing making their financial portfolio strong.
 
 ### Finance Visualizer
 
@@ -36,3 +40,19 @@ We compile tricks and tips, as well as financial advice, and present it to you i
 ![App Screenshot](https://ik.imagekit.io/jn4utpxjgdd/About_I-ZnNpaO-B1.png?updatedAt=1628789726177)
 
 ![App Screenshot](https://ik.imagekit.io/jn4utpxjgdd/Learn_4YKCszaEwPz.png?updatedAt=1628789747457)
+
+## Features
+
+- Voice-over
+- Graph representation
+- User Interactive
+- Cross platform
+
+## T&C
+
+- This is a proof-of-concept website for our financial visualisation concept.
+- All of the information we gathered came from reliable sources like Bajaj Finserv, Investopedia, the Ministry of Finance, Policybazaar, etc.
+- Users will benefit from more accurate and precise data as our website evolves.
+- We don't use real-time data; all of our data is pre-programmed. Only for the purpose of depiction, there are randomly generated values.
+- The graph's gains and losses are fictitious. There are randomly generated values only for the purpose of depiction
+  

@@ -5,6 +5,8 @@
   margin: 0 auto;
   margin-top: 10vh;
   min-height: 90vh;
+  transition: 0.3s ease-in-out;
+  transition-property: opacity;
   //   margin-top: calc(10vh + 10px);
   .header {
     @extend .flexRow;
@@ -46,7 +48,7 @@
       backdrop-filter: blur(15px);
       /* Note: backdrop-filter has minimal browser support */
 
-      border-radius: 5px;
+      border-radius: 10px;
 
       .bulletTitle {
         margin: 1rem 0;
@@ -78,6 +80,13 @@
         width: 90%;
         margin-left: auto;
       }
+    }
+  }
+  .chartAnimation {
+    min-height: 80vh;
+    @extend .flexCol;
+    p {
+      margin: 1rem 0;
     }
   }
 }

@@ -50,7 +50,7 @@ const LearnIntro = ({ history }) => {
         })
       );
       setInitialAmount(amount);
-      history.push(`/learn/chapter/${1}`);
+      history.push(`/learn/chapter/1/0`);
       return;
     }
 

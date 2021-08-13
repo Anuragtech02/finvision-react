@@ -3,7 +3,7 @@ import sphere from "../../assets/About/about-football.png";
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div id="about" className={styles.container}>
       <div className={styles.textContainer}>
         <p>ABOUT US</p>
         <h1 className={styles.heading}>

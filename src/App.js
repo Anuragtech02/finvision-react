@@ -9,7 +9,7 @@ import InputField from "./components/InputField/InputField";
 import Cursor from "./components/Cursor/Cursor";
 // import InputField from "./components/InputField/InputField";
 // import Cursor from "./components/Cursor/Cursor";
-import { Home, Learn, Chapter } from "./pages";
+import { Home, Learn, Chapter, ChapterGraph } from "./pages";
 import GlobalContextProvider from "./utils/contexts/GlobalContext";
 
 const App = () => {
@@ -25,19 +25,20 @@ const App = () => {
           <img src={leftGradient} alt="finvision-gradient" />
         </div> */}
           </div>
-
-          <Router basename="/finvision-react">
-            <Navbar />
-
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route exact path="/learn" component={Learn} />
-              <Route exact path="/learn/:id" component={Learn} />
-
-              <Route exact path="/learn/chapter/:id" component={Chapter} />
-            </Switch>
-          </Router>
-
+        <Router basename="/finvision-react">
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route exact path="/learn" component={Learn} />
+            <Route exact path="/learn/:id" component={Learn} />
+            <Route exact path="/learn/chapter/:id/:subId" component={Chapter} />
+            <Route
+              exact
+              path="/learn/chapter/:id/:subId/:title"
+              component={ChapterGraph}
+            />
+          </Switch>
+        </Router>
           {/* <div className={styles.gradientLeft}>
         <img src={leftGradient} alt="finvision-gradient" />
       </div> */}
