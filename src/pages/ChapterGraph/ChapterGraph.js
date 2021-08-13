@@ -36,7 +36,7 @@ const ChapterGraph = ({ history }) => {
           having{" "}
           {numberFormat(
             chartData.datasets[0]?.data[
-              chartData.datasets[0].data?.length - 2
+              chartData.datasets[0].data?.length - 1
             ]?.toFixed(2)
           )}{" "}
           after a tenure of 10 years.
