@@ -32,6 +32,7 @@ const Contact = () => {
   }
   return (
     <div className={styles.container}>
+      <h1>Contact Us</h1>
       <form onSubmit={submitHandler}>
         <InputField
           style={{ gridArea: "name" }}
