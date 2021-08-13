@@ -3,20 +3,24 @@
 .container {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
   height: 10vh;
   min-height: 100px;
   @extend .flexRow;
   justify-content: space-between;
-  padding: 0 10%;
+  width: var(--fixedWidth);
+  margin: 0 auto;
   z-index: 5;
 
   .logo {
-    color: white;
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
-    font-size: 1.2rem;
+    a {
+      @extend .noDecoration;
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
   }
 
   .navLinks {

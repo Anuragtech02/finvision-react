@@ -92,6 +92,7 @@ const LearnIntro = ({ history }) => {
               <div className={styles.initialAmount}>
                 <p>Initial Balance</p>
                 <input
+                  disabled
                   value={numberFormat(amount)}
                   onChange={(e) => setAmount(e.target.value)}
                 />

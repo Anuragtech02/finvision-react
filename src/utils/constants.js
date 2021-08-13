@@ -26,11 +26,23 @@ export const investmentOptions = [
   },
 ];
 
-// export const chapters = [
-//     {
-//         title: "What is investing?",
-//         subchapters: {
-//             title: "selecte investment plan"
-//         }
-//     }
-// ]
+export const chapters = [
+  {
+    title: "What is Investing",
+    subchapters: [
+      "Select Investement Plan",
+      "Select Amount",
+      "Enriching the Idea",
+      "Visualization the graph",
+    ],
+  },
+  {
+    title: "Reduce Loan tenure",
+    subchapters: [
+      "Understanding Loan",
+      "Select duration and Amount",
+      "How to reduce ?",
+      "You did it!!",
+    ],
+  },
+];
