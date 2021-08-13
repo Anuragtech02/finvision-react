@@ -8,7 +8,7 @@ import InputField from "./components/InputField/InputField";
 import Cursor from "./components/Cursor/Cursor";
 // import InputField from "./components/InputField/InputField";
 // import Cursor from "./components/Cursor/Cursor";
-import { Home, Learn, Chapter } from "./pages";
+import { Home, Learn, Chapter, ChapterGraph } from "./pages";
 import GlobalContextProvider from "./utils/contexts/GlobalContext";
 
 const App = () => {
@@ -31,6 +31,11 @@ const App = () => {
             <Route exact path="/learn" component={Learn} />
             <Route exact path="/learn/:id" component={Learn} />
             <Route exact path="/learn/chapter/:id/:subId" component={Chapter} />
+            <Route
+              exact
+              path="/learn/chapter/:id/:subId/:title"
+              component={ChapterGraph}
+            />
           </Switch>
         </Router>
 

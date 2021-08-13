@@ -8,7 +8,6 @@ import { investmentOptions } from "../../utils/constants";
 import { motion } from "framer-motion";
 import { withRouter } from "react-router";
 import { calculateCompoundInterest } from "../../utils/formula";
-import { Line } from "react-chartjs-2";
 
 const numberFormat = (value) =>
   new Intl.NumberFormat("en-IN", {
@@ -20,33 +19,13 @@ const Chapter = ({ history }) => {
   const [animActive, setAnimActive] = useState(false);
   const [graphActive, setGraphActive] = useState(false);
   const [calculatedData, setCalculatedData] = useState([]);
-  const [chartData, setChartData] = useState({
-    labels: [
-      "Year 0",
-      "Year 1",
-      "Year 2",
-      "Year 3",
-      "Year 4",
-      "Year 5",
-      "Year 6",
-      "Year 7",
-      "Year 8",
-      "Year 9",
-      "Year 10",
-    ],
-    datasets: [
-      {
-        label: "Amount",
-        data: calculatedData,
-      },
-    ],
-  });
 
-  const { selected, setSelected } = useState("");
+  const [selected, setSelected] = useState({});
 
   const { id, subId } = useParams();
 
-  const { initialAmount, chapters, setChapters } = useContext(GlobalContext);
+  const { initialAmount, chapters, setChapters, chartData, setChartData } =
+    useContext(GlobalContext);
 
   const container = useRef(null);
   const anim = useRef(null);
@@ -55,23 +34,29 @@ const Chapter = ({ history }) => {
     console.log({ chapters });
   }, [chapters]);
 
-  const onClickCard = () => {
+  const onClickCard = (option) => {
     container.current.style.opacity = 0;
+    setSelected(option);
     setTimeout(() => {
       container.current.style.display = "none";
       setAnimActive(true);
     }, 200);
     setTimeout(() => {
       setAnimActive(false);
-      setGraphActive(true);
+      // setGraphActive(true);
+      history.push(`/learn/chapter/${id}/${subId}/${option.title}`);
     }, 5000);
   };
 
   useEffect(() => {
-    let total = 100000;
-    const res = [100000];
+    let total = initialAmount;
+    const res = [initialAmount];
     for (let i = 0; i < 10; i++) {
-      let interest = calculateCompoundInterest(total, i + 1);
+      let interest = calculateCompoundInterest(
+        total,
+        i + 1,
+        (getRandomRate(selected?.type) || selected.returnAmt) / 100
+      );
       res.push(interest + total);
     }
     setCalculatedData(res);
@@ -81,7 +66,7 @@ const Chapter = ({ history }) => {
         {
           label: "Amount",
           data: res,
-          backgroundColor: "#3e1f8b33",
+          backgroundColor: "#3e1f8b50",
           borderColor: "white",
           fill: true,
           opacity: 0.6,
@@ -154,7 +139,7 @@ const Chapter = ({ history }) => {
                       title={option.title}
                       risk={option.risk}
                       returnRate={option.return}
-                      onClick={onClickCard}
+                      onClick={() => onClickCard(option)}
                     />
                   </motion.div>
                 </Grid>
@@ -205,23 +190,21 @@ const Chapter = ({ history }) => {
           <p>Please wait while we calculate stuff for you...</p>
         </motion.div>
       )}
-      {graphActive && (
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className={styles.chartContainer}
-        >
-          <Line
-            data={chartData}
-            options={{
-              maintainAspectRatio: true,
-            }}
-          />
-        </motion.div>
-      )}
     </div>
   );
 };
 
 export default withRouter(Chapter);
+
+const getRandomRate = (option) => {
+  switch (option) {
+    case "gold":
+      return Math.floor(Math.random() * 11) + 8;
+    case "property":
+      return Math.floor(Math.random() * 12) + 9;
+    case "share":
+      return Math.floor(Math.random() * 15) - 1;
+    default:
+      return;
+  }
+};
