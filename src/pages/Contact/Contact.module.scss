@@ -1,0 +1,13 @@
+@import "../../utils//commons.scss";
+.container {
+  width: 350px;
+  margin-left: 100px;
+  margin-top: 150px;
+  @media screen and (max-width: $media-md) {
+    margin-left: 5%;
+  }
+  @media screen and (max-width: $media-sm) {
+    margin-left: 30px;
+    position: relative;
+  }
+}

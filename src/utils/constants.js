@@ -28,7 +28,7 @@ export const investmentOptions = [
 
 export const chapters = [
   {
-    title: "What is Investing",
+    title: "What is Investing?",
     subChapters: [
       "Where would you like to invest?",
       "Select Amount",

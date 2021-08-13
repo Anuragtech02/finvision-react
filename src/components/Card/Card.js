@@ -1,8 +1,8 @@
 import styles from "./Card.module.scss";
 
-const Card = ({ title, risk, returnRate, children, props }) => {
+const Card = ({ title, risk, returnRate, onClick, children, props }) => {
   return (
-    <div className={styles.container} {...props}>
+    <div className={styles.container} onClick={onClick} {...props}>
       <h5>{title}</h5>
       <div className={styles.detailsContainer}>
         <div className={styles.riskContainer}>
