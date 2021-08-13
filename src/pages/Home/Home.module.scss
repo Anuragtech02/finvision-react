@@ -76,8 +76,8 @@
   @extend .flexRow;
   position: relative;
   height: 100vh;
-  overflow-x: hidden;
-  justify-content: space-between;
+  overflow: hidden;
+  margin: auto;
   width: var(--fixedWidth);
 
   // background: url(../../assets/Home/coin.png);
@@ -117,6 +117,10 @@
         font-size: 1.5rem;
       }
     }
+    @media screen and (max-width: $media-sm) {
+      margin-top: -1rem;
+      padding: 40px;
+    }
   }
 
   .heroParaContainer {
@@ -129,6 +133,10 @@
     .heroPara {
       // width: fit-content;
       width: 80%;
+    }
+    @media screen and (max-width: $media-md) {
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -155,6 +163,9 @@
 
   .scrollToDiscover {
     cursor: pointer;
+  }
+  @media screen and (max-width: $media-md) {
+    margin-top: 50px;
   }
   @media screen and (max-width: $media-sm) {
     width: 100%;
