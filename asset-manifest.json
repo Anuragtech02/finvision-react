@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/finvision-react/static/css/main.2627c4b0.chunk.css",
-    "main.js": "/finvision-react/static/js/main.53126144.chunk.js",
-    "main.js.map": "/finvision-react/static/js/main.53126144.chunk.js.map",
+    "main.css": "/finvision-react/static/css/main.a7c7e6d5.chunk.css",
+    "main.js": "/finvision-react/static/js/main.f8526f8f.chunk.js",
+    "main.js.map": "/finvision-react/static/js/main.f8526f8f.chunk.js.map",
     "runtime-main.js": "/finvision-react/static/js/runtime-main.9b5b8f96.js",
     "runtime-main.js.map": "/finvision-react/static/js/runtime-main.9b5b8f96.js.map",
-    "static/js/2.5324747c.chunk.js": "/finvision-react/static/js/2.5324747c.chunk.js",
-    "static/js/2.5324747c.chunk.js.map": "/finvision-react/static/js/2.5324747c.chunk.js.map",
+    "static/js/2.fcd40308.chunk.js": "/finvision-react/static/js/2.fcd40308.chunk.js",
+    "static/js/2.fcd40308.chunk.js.map": "/finvision-react/static/js/2.fcd40308.chunk.js.map",
     "index.html": "/finvision-react/index.html",
-    "static/css/main.2627c4b0.chunk.css.map": "/finvision-react/static/css/main.2627c4b0.chunk.css.map",
-    "static/js/2.5324747c.chunk.js.LICENSE.txt": "/finvision-react/static/js/2.5324747c.chunk.js.LICENSE.txt",
+    "static/css/main.a7c7e6d5.chunk.css.map": "/finvision-react/static/css/main.a7c7e6d5.chunk.css.map",
+    "static/js/2.fcd40308.chunk.js.LICENSE.txt": "/finvision-react/static/js/2.fcd40308.chunk.js.LICENSE.txt",
     "static/media/about-football.c9ec9e41.png": "/finvision-react/static/media/about-football.c9ec9e41.png",
     "static/media/coin.b765fc0f.png": "/finvision-react/static/media/coin.b765fc0f.png",
     "static/media/cursor.4145b0d7.svg": "/finvision-react/static/media/cursor.4145b0d7.svg",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9b5b8f96.js",
-    "static/js/2.5324747c.chunk.js",
-    "static/css/main.2627c4b0.chunk.css",
-    "static/js/main.53126144.chunk.js"
+    "static/js/2.fcd40308.chunk.js",
+    "static/css/main.a7c7e6d5.chunk.css",
+    "static/js/main.f8526f8f.chunk.js"
   ]
 }
