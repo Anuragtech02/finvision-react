@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import styles from "./App.module.scss";
+import Footer from "./components/Footer/Footer";
 import rightGradient from "./assets/gradients/right-gradient.svg";
 import leftGradient from "./assets/gradients/left-gradient.svg";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,16 +15,16 @@ import GlobalContextProvider from "./utils/contexts/GlobalContext";
 const App = () => {
   return (
     <GlobalContextProvider>
-      <div className={styles.container}>
-        <div className={styles.gradientRight}>
-          {/* <div className={styles.gradientRight}>
+      <div className={styles.coverContainer}>
+        <div className={styles.container}>
+          <div className={styles.gradientRight}>
+            {/* <div className={styles.gradientRight}>
           <img src={rightGradient} alt="finvision-gradient" />
           </div>
           <div className={styles.gradientLeft}>
           <img src={leftGradient} alt="finvision-gradient" />
         </div> */}
-        </div>
-
+          </div>
         <Router basename="/finvision-react">
           <Navbar />
           <Switch>
@@ -38,10 +39,11 @@ const App = () => {
             />
           </Switch>
         </Router>
-
-        {/* <div className={styles.gradientLeft}>
+          {/* <div className={styles.gradientLeft}>
         <img src={leftGradient} alt="finvision-gradient" />
       </div> */}
+        </div>
+        <Footer />
       </div>
     </GlobalContextProvider>
   );
