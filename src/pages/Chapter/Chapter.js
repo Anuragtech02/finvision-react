@@ -16,7 +16,7 @@ const numberFormat = (value) =>
 const Chapter = () => {
   const { id } = useParams();
 
-  const { initialAmount } = useContext(GlobalContext);
+  const { initialAmount, chapters, setChapters } = useContext(GlobalContext);
 
   return (
     <div className={styles.container}>
