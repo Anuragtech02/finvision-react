@@ -84,16 +84,17 @@ body {
     font-size: 1.2rem;
   }
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100vw;
-  //   height: 100vh;
-  //   background-image: url($noise);
-  //   background-size: cover;
-  //   z-index: 10;
-  //   pointer-events: none;
-  // }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url($noise);
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.6;
+  }
 }

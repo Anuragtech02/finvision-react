@@ -14,7 +14,7 @@ const numberFormat = (value) =>
   }).format(value);
 
 const Chapter = () => {
-  const { id } = useParams();
+  const { id, subId } = useParams();
 
   const { initialAmount, chapters, setChapters } = useContext(GlobalContext);
 
@@ -25,7 +25,7 @@ const Chapter = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <p>Where would you like to invest?</p>
+        <p>{chapters[id - 1]?.subChapters[subId - 1]?.title}</p>
         <div className={styles.initialBalance}>
           <p>Current Balance</p>
           <h5>{numberFormat(initialAmount)}</h5>

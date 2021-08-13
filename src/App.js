@@ -33,7 +33,7 @@ const App = () => {
             <Route exact path="/learn/:id" component={Learn} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/learn/chapter/:id" component={Chapter} />
+            <Route exact path="/learn/chapter/:id/:subId" component={Chapter} />
           </Switch>
         </Router>
         {/* <div className={styles.gradientLeft}>

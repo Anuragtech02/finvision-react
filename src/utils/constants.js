@@ -30,7 +30,7 @@ export const chapters = [
   {
     title: "What is Investing",
     subChapters: [
-      "Select Investement Plan",
+      "Where would you like to invest?",
       "Select Amount",
       "Enriching the Idea",
       "Visualization the graph",
