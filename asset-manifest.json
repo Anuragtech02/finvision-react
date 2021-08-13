@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/finvision-react/static/css/main.5c555e2e.chunk.css",
-    "main.js": "/finvision-react/static/js/main.1e9d1c36.chunk.js",
-    "main.js.map": "/finvision-react/static/js/main.1e9d1c36.chunk.js.map",
+    "main.js": "/finvision-react/static/js/main.a60056a3.chunk.js",
+    "main.js.map": "/finvision-react/static/js/main.a60056a3.chunk.js.map",
     "runtime-main.js": "/finvision-react/static/js/runtime-main.9b5b8f96.js",
     "runtime-main.js.map": "/finvision-react/static/js/runtime-main.9b5b8f96.js.map",
     "static/js/2.09100b28.chunk.js": "/finvision-react/static/js/2.09100b28.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.9b5b8f96.js",
     "static/js/2.09100b28.chunk.js",
     "static/css/main.5c555e2e.chunk.css",
-    "static/js/main.1e9d1c36.chunk.js"
+    "static/js/main.a60056a3.chunk.js"
   ]
 }
